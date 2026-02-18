@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 import os
 
 # Load environment variables
-load_dotenv()
+#load_dotenv()
 
 # Get API key
 api_key = os.getenv("GOOGLE_API_KEY")
@@ -58,3 +58,4 @@ if st.button("Generate Itinerary"):
             except Exception as e:
                 st.error("Error occurred:")
                 st.code(str(e))
+
