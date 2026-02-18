@@ -1,0 +1,116 @@
+FULL TERMINAL STEPS (From Starting)
+✅ 1️⃣ Go to Your Project Folder
+
+If your project is already created:
+
+cd path/to/your/project
+
+
+Example (Windows):
+
+cd Desktop\your-project-folder
+
+
+Example (Mac/Linux):
+
+cd Desktop/your-project-folder
+
+✅ 2️⃣ Create Virtual Environment (Very Important)
+python -m venv venv
+
+✅ 3️⃣ Activate Virtual Environment
+🔹 Windows
+venv\Scripts\activate
+
+🔹 Mac/Linux
+source venv/bin/activate
+
+
+After activation you will see:
+
+(venv)
+
+
+in your terminal.
+
+✅ 4️⃣ Install Required Libraries
+
+If you already have requirements.txt:
+
+pip install -r requirements.txt
+
+
+If not, install manually:
+
+pip install streamlit python-dotenv requests
+
+✅ 5️⃣ Create .env File (For Local API Key)
+
+Create file:
+
+.env
+
+
+Inside that file:
+
+API_KEY=your_api_key_here
+
+✅ 6️⃣ Run Your Streamlit App
+streamlit run app.py
+
+
+Browser will open automatically.
+
+🌍 IF YOU ARE PUSHING TO GITHUB
+✅ 7️⃣ Initialize Git (If not done)
+git init
+
+✅ 8️⃣ Add Files
+git add .
+
+✅ 9️⃣ Commit
+git commit -m "Initial commit"
+
+✅ 🔟 Connect to GitHub Repo
+
+Create empty repo in GitHub first.
+
+Then copy repo URL and run:
+
+git remote add origin https://github.com/your-username/your-repo-name.git
+git branch -M main
+git push -u origin main
+
+☁️ FOR STREAMLIT CLOUD DEPLOYMENT
+
+You DO NOT use terminal for API key.
+
+Instead:
+
+Push to GitHub
+
+Go to Streamlit Community Cloud
+
+Deploy app
+
+Add API key inside Secrets
+
+
+After installing libraries:
+
+pip freeze > requirements.txt
+
+🧹 If Something Breaks (Reset Method)
+
+Deactivate:
+
+deactivate
+
+
+Delete venv folder and recreate:
+
+rm -rf venv   # Mac/Linux
+rmdir /s venv # Windows
+
+
+Then repeat from Step 2.
